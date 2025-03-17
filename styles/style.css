@@ -14,6 +14,17 @@ created: 15/3/2025
     color: white;
 }
 
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body{
     display:flex;
     flex-direction: column;
@@ -24,45 +35,83 @@ body{
    Header Section
    ====================== */
 header{
+    display: flex;
     text-align: center;
+    align-items: center;
     font-size: 20px;
     font-weight: 400;
 }
 
+.logo{
+    position: relative;
+    right: 8%;
+    width: 70px;
+    height: 70px;
+}
+
 /* Navigation Links Styling */
+nav{
+    width: 70vw;
+}
+
 header a{
     text-decoration: none;
     text-transform: uppercase;
 }
 
 .menu ul{
-    list-style-type: none;
-    margin-left: 80px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.menu li{
-    display: inline-block;
-    padding-right: 90px;
+.menu li {
+    list-style-type: none;
+    width: 150px;  /* Adjust width dynamically */
+    height: 40px; /* Allow content to define height */
+    overflow: hidden;
+    padding: 10px;
+}
+
+li>span{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+li:hover span{
+    transform: translateY(-100%);
+}
+
+li>span:nth-child(1){
+    font-size:20px;
 }
 
 .section_1{
     position: relative;
+    background-image: url(images/background.jpg);
     padding: 10%;
     align-items: center;
+    justify-content: center;
+    max-width: 200vh;
     width: 80%;
 }
 
 .header_wrapper{
-    border: 2px solid black;
-    background: none;
-    border-radius: 20px;
-    padding: 2%;
-    padding-right: 2%;
+    border: 2px solid white;
     display: inline-block;
+    background-color: rgba(128, 128, 128, 0.349);
+    border-radius: 25px;
+    padding: 2%;
+    animation: slideUp 0.8s ease-out;
 }
 
 .name{
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 0;
     text-decoration:none;
     font-weight: 500;
@@ -71,6 +120,7 @@ header a{
 
 .desc{
     font-size: 35px;
+    font-weight: 200;
     padding-right: 20px;
     margin-top: 0;
     margin-bottom: 0;
@@ -78,37 +128,103 @@ header a{
 }
 
 .btn{
+    margin-bottom: 2%;
     display: flex;
     text-decoration: none;
-    font-size: 40px;
-    font-weight: 500;
-    height: 50px;
-    width: 50px;
-    background-color: rgb(33, 76, 218);
+    height: 44px;
+    width: 44px;
+    background-color: rgba(33, 76, 218, 0.534);
     border-radius: 50%;
     justify-content: center;
     align-items: center;
 }
 
-.line2{
-    display: flex;
+i{
+    background: none;
 }
 
-.section_2 h4{
-    font-size: 25px;
+.line2{
+    display: flex;
+    background: none;
 }
 
 .section_2{
-    margin-bottom: 20%;
+    position: relative;
+    margin-bottom: 10%;
+    animation: slideUp 0.8s ease-out;
+}
+
+.section_2 h4{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    text-align: left;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .section_2 h4 {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.section_2 p{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
 }
 
 .explore{
+    max-width: 150vw;
+    width: 55vw;
     display: flex;
-    
+    justify-content: space-between;
 }
 
 .mission-item{
     text-decoration: none;
     font-size: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: solid 2.4px rgb(187, 165, 61);
+    border-radius: 25px;
+}
+
+.mission-item:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.mission-item:hover span{
+    color: black;
+}
+
+.mission-item:hover svg{
+    fill: black;
+}
+
+.mission-name{
+    margin-top: 2%;
+    font-weight: 500;
+    background: none;
+    font-size: 25px;
+    color: white;
+}
+
+.text-center{
+    background: none;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5% ;
+    color: rgb(155, 152, 152);
+}
+
+svg{
+    padding: 2rem 5rem 2rem 5rem;
+    fill:white;
+    background: none;
 }
