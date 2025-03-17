@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    background: black;
+    align-items: center;
+}
+
+/* ======================
+   Header Section
+   ====================== */
+header{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.logo{
+    position: relative;
+    right: 8%;
+    width: 70px;
+    height: 70px;
+}
+
+/* Navigation Links Styling */
+nav{
+    width: 70vw;
+}
+
+header a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu ul{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu li {
+    list-style-type: none;
+    width: 150px;  /* Adjust width dynamically */
+    height: 40px; /* Allow content to define height */
+    overflow: hidden;
+    padding: 10px;
+}
+
+li>span{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+li:hover span{
+    transform: translateY(-100%);
+}
+
+li>span:nth-child(1){
+    font-size:20px;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro{
+    width: 99%;
+    position: relative;
+    align-items: center;
+    padding: 100px 15px 100px 15px;
+    background-color: #00000048;
+    background-image: url(images/apply_background.jpg);
+}
+
+.text-box{
+    align-items: center;
+    padding-left: 10%;
+    position: relative;
+    animation: slideUp 0.8s ease-out;
+}
+
+.text-box p{
+    font-size: 20px;
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #202020;
+    margin-top: 4%;
+    padding: 25px 30px;
+    border-radius: 30px; 
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.041);
+    animation: slideUp 0.8s ease-out;
+}
+
+.container form .user-details {
+    color: white;
+    margin-left: 5%;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .user-details .input-box {
+    margin-bottom: 12px;
+    width: calc(100% / 2 - 10px);
+  }
+
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+.user-details .input-box input {
+    color: black;
+    font-weight: 500;
+    height: 40px;
+    width: 80%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 0.5px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+
+ 
+.user-details .input-box input[type="radio"] {
+    width: 16px;
+    height: 16px;
+}
+
+.gender-options{
+    display: flex;
+    gap: 20px;
+}
+
+.gender-options label{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.user-details .input-box input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+
+.user-details .input-box select{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border: 0.5px solid #ccc;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.checkbox-container{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.skill-label{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px;
+
+}
+
+.user-details .input-box fieldset {
+    width: 76.5%; /* Match input width */
+    height: 40px; /* Match input height */
+    border-radius: 5px; /* Same rounded corners as input */
+    border: 0.5px solid #ccc;
+    padding: 10px 10px; /* Adjust padding for content */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    gap: 40px; /* Space between radio buttons */
+}
+
+.user-details .input-box fieldset legend {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding:15px 20px;
+    color: #fff;
+    background-image: linear-gradient(45deg,#ffffff,#000000);
+    font-size: 20px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s ;
+}
+
+/* Button Hover Effect */
+.btn:hover{
+    border-top-right-radius: 30px;
+}
+
+form .btn{
+    height:60px ;
+    margin-top: 3%;
+    margin-right: 8%;
+}
+
+form .btn input{
+    background: none;
+    text-align: center;
+    align-items: center;
+    border: none;
+    color: white;
+    height: 60px;
+    width: 70px;
+    font-weight: 500;
+    font-size: 20px;   
+}
+
+footer{
+    margin-top: 8%;
+    text-align: center;
+}
