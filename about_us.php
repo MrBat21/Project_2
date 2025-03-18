@@ -62,7 +62,6 @@
                 <li><strong>Hoang Don Xuan Vinh</strong> - 105545302 - 100% - making the website format, homepage, adding CSS features.</li>
             </ul>
         </div>
-        </div>
         <div class="mail">
             <h2>Contact Us:</h2>
             <ul>
@@ -113,7 +112,6 @@
                         <td>Designing CSS for the enhancement page</td>
                     </tr>
                 </tbody>
-
             </table>
         </div>
         <!-- Group Photo -->
@@ -137,5 +135,5 @@
         <div class="footer">&#169; 2025 SFC, All rights reserved.</div>
         <div class="contact">Contact Us: example@gmail.com</div>
         </footer>
-            </body>
-            </html>
+    </body>
+</html>
