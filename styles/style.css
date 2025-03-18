@@ -179,6 +179,7 @@ i{
     max-width: 150vw;
     width: 55vw;
     display: flex;
+    gap: 4em;
     justify-content: space-between;
 }
 
