@@ -140,11 +140,19 @@ li>span:nth-child(1){
     transform: translate(-50%, -50%) scale(0.1);
     visibility: hidden;
     align-items: center;
-    text-align: center;
     padding: 20px;
     transition: transform 0.4s, top 0.4s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1001;
+}
+
+.popup button{
+    padding: 10px;
+    color: black;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 20px;
 }
 
 .open-popup{
