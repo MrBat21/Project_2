@@ -26,7 +26,7 @@
                     </li>
                     <li>
                     <span><i class="fa fa-cogs" aria-hidden="true"></i></span>
-                    <span><a href="management.php">Management</a></span>
+                    <span><a href="manage.php">Management</a></span>
                     </li>
                     <li>
                     <span><i class="fa fa-desktop" aria-hidden="true"></i></span>
