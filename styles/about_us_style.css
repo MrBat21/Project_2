@@ -61,12 +61,12 @@ header a{
     list-style-type: none;
     padding: 10px 20px;
     border-radius: 20px;
-    background: #333;
+    background: #030303;
     transition: 0.3s;
 }
 
 .menu li:hover{
-    background: #555;
+    background: #000000;
 }
 
 .menu li a{
@@ -119,38 +119,87 @@ header{
     font-size: 20px;
     font-weight: 400;
 }
+.logo{
+    position: relative;
+    right: 8%;
+    width: 70px;
+    height: 70px;
+}
+/* Navigation Links Styling */
+nav{
+    width: 70vw;
+}
+
+header a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu ul{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu li {
+    list-style-type: none;
+    width: 150px;  /* Adjust width dynamically */
+    height: 40px; /* Allow content to define height */
+    overflow: hidden;
+    padding: 10px;
+}
+
+li>span{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+li:hover span{
+    transform: translateY(-100%);
+}
+
+li>span:nth-child(1){
+    font-size:20px;
+}
+
+hr{
+    width: 100%;
+    color: rgb(62, 62, 62);
+}
+/* Animation for section slide-up */
 section {
     animation: slideUp 0.8s ease;
 }
 
+/* Enhanced table styling */
 table {
-    width: 80%;
-    margin: 20px auto;
+    width: 100%;
     border-collapse: collapse;
-    background: white;
-    color: black;
-    font-size: 1.2em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
+    margin-top: 20px;
 }
 
 table th, table td {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid white;
 }
 
 table th {
-    background: #333;
+    background-color: #333;
     color: white;
-    text-transform: uppercase;
+    font-weight: bold;
 }
 
 table tr:nth-child(even) {
-    background: #f2f2f2;
+    background-color: #1a1a1a;
 }
 
 table tr:hover {
-    background: #ddd;
+    background-color: #444;
+    transition: background-color 0.3s ease;
 }
