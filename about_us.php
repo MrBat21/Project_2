@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <title>Home Page</title>
-        <link rel="stylesheet" href="styles/jobs_style.css">
         <link rel="stylesheet" href="styles/about_us_style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,16 +97,7 @@
             </table>
         </div>
         <div class="second-line">
-            <div class="group-photo">
-                <h2>Our Group Photo</h2>
-                <img src="images/group_photo.jpg" alt="SFC Group Photo">
-                <p>Our amazing team working together!</p>
-            </div>
             <div class="map">
-                <h2>Our Location</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4883.5267227319055!2d106.65590537588385!3d10.80606815864453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175293bd3699b07%3A0x940f9759f860b26a!2sChao%20Lua%20Football%20Field!5e1!3m2!1sen!2s!4v1740043319935!5m2!1sen!2s" 
-                width="600" height="450" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
             <h2>Our Location</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4883.5267227319055!2d106.65590537588385!3d10.80606815864453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175293bd3699b07%3A0x940f9759f860b26a!2sChao%20Lua%20Football%20Field!5e1!3m2!1sen!2s!4v1740043319935!5m2!1sen!2s" 
             width="600" height="450" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
