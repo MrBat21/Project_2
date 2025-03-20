@@ -203,3 +203,38 @@ table tr:hover {
     background-color: #444;
     transition: background-color 0.3s ease;
 }
+.leadership-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .leadership-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .leader {
+    text-align: center;
+  }
+  
+  .leader img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .leader h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+  }
+  
+  .leader p {
+    font-size: 16px;
+    color: gray;
+  }
+  
