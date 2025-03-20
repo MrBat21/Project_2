@@ -100,22 +100,22 @@
   <h2>Our Members</h2>
   <div class="leadership-container">
     <div class="leader">
-      <img src="link_đến_hình_ảnh_1.jpg" alt="Tên thành viên 1">
+      <img src="VoCongMinh.jpg" alt="Vo Cong Minh">
       <h3>Vo Cong Minh</h3>
       <p>President</p>
     </div>
     <div class="leader">
-      <img src="link_đến_hình_ảnh_2.jpg" alt="Tên thành viên 2">
+      <img src="LeNgocTrieuDuong.jpg" alt="Le Ngoc Trieu Duong">
       <h3>Le Ngoc Trieu Duong</h3>
       <p>Player</p>
     </div>
     <div class="leader">
-      <img src="link_đến_hình_ảnh_3.jpg" alt="Tên thành viên 3">
+      <img src="HoangDonXuanVinh.jpg" alt="Hoang Don Xuan Vinh">
       <h3>Hoang Don Xuan Vinh</h3>
       <p>Player</p>
     </div>
     <div class="leader">
-      <img src="link_đến_hình_ảnh_3.jpg" alt="Tên thành viên 3">
+      <img src="TruongMinhTinh.jpg" alt="Truong Minh Tinh">
       <h3>Truong Minh Tinh</h3>
       <p>Player</p>
     </div>
