@@ -1,88 +1,148 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-	<meta name="description"	content="COS10026 Assignment Part 2 manage page">
-	<meta name="keywords"		content="Swinburne COS10026 Assignment Part 2 manage page">	
-	<title>Code Crafters</title>
-</head>
-<body>
-
 
 <?php
-include 'settings.php';
-
-$connection = mysqli_connect($host, $username, $password, $database);
-
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit();
-}
+    include 'header.inc';
 ?>
 
-<?php
-// Check for form submissions:
-    if(isset($_POST['list_all'])) {
-        $result = mysqli_query($connection, "SELECT * FROM eoi");
-        displayResults($result);
-    }
-    
-    if(isset($_POST['list_by_job'])) {
-        $ref_num = mysqli_real_escape_string($connection, $_POST['ref_num']);
-        $result = mysqli_query($connection, "SELECT * FROM eoi WHERE Job Reference number='$ref_num'");
-        displayResults($result);
-    }
-    
-    if(isset($_POST['list_by_name'])) {
-        $first_name = mysqli_real_escape_string($connection, $_POST['first_name']);
-        $last_name = mysqli_real_escape_string($connection, $_POST['last_name']);
-        $result = mysqli_query($connection, "SELECT * FROM eoi WHERE First name='$first_name' OR Last name='$last_name'");
-        displayResults($result);
-    }
-    
-    if(isset($_POST['change_status'])) {
-        $eoi_number = mysqli_real_escape_string($connection, $_POST['eoi_number']);
-        $status = mysqli_real_escape_string($connection, $_POST['status']);
-        mysqli_query($connection, "UPDATE eoi SET Status='$status' WHERE EOInumber='$eoi_number'");
-        echo "Status updated successfully!";
-    }
-    
-    if(isset($_POST['delete_by_job'])) {
-        $del_ref_num = mysqli_real_escape_string($connection, $_POST['del_ref_num']);
-        mysqli_query($connection, "DELETE FROM eoi WHERE Job Reference number='$del_ref_num'");
-        echo "EOIs deleted successfully!";
-    }
-    
-    // Function to display the results in a table:
+<body class="manage-body">
+    <?php 
+        include 'menu.inc';
+    ?>
+    <?php
+        require_once "settings.php";
+        $conn = @mysqli_connect($host, $username, $password, $sql_db); 
 
+        if ($conn) { 
+            $query = "SELECT * FROM eoi"; 
+            $result = mysqli_query($conn, $query); 
 
-    function displayResults($result) {
-        global $connection;  // This allows access to $connection inside the function
-    
-        echo "<table border='1'>
-        <tr>
-        <th>EOI Number</th>
-        <th>Job Reference Number</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <!-- Add other columns as needed -->
-        </tr>";
+        if ($result) { 
         
-        if ($result) {
-            while($row = mysqli_fetch_assoc($result)) {
+        } else {
+            echo "<p>There is no information to display</p>";
+        }
+
+        mysqli_close($conn); 
+        } else {
+        echo "<p>Unable to connect to the db.</p>"; 
+        }
+    ?>
+    <div class="phpmeminfo">
+    <table border="1" style="color: black; margin: 7%; background-color:rgb(255, 255, 255); text-align: center; border-radius: 20px; padding: 4px;" >
+        <caption style="color: black; font-size: 2em;">Members information</caption>
+        <?php
+            echo "<tr>";
+            echo "<th>EOI Number</th> <th>Job Reference Number</th> <th>First Name</th> <th>Last Name</th> <th>DOB</th> <th>Gender</th> <th>Street Address</th> <th>Suburb/town</th> <th>State</th> <th>Postcode</th> <th>Email</th> <th>Phone</th> <th>Skills</th> <th>Other skills</th> <th>Status</th>" ;
+            echo "</tr>";
+            while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>";
-                echo "<td>" . $row['EOInumber'] . "</td>";
-                echo "<td>" . $row['Job Reference number'] . "</td>";  // Consider renaming columns without spaces
-                echo "<td>" . $row['First name'] . "</td>";             // Consider renaming columns without spaces
-                echo "<td>" . $row['Last name'] . "</td>";              // Consider renaming columns without spaces
+                echo "<td>". $row["EOInumber"] ."</td>";
+                echo "<td>". $row["JobReferenceNumber"] ."</td>";
+                echo "<td>". $row["FirstName"] ."</td>";    
+                echo "<td>". $row["LastName"] ."</td>";
+                echo "<td>". $row["DateOfBirth"] ."</td>";
+                echo "<td>". $row["Gender"] ."</td>";
+                echo "<td>". $row["StreetAddress"] ."</td>";
+                echo "<td>". $row["Suburb"] ."</td>";    
+                echo "<td>". $row["State"] ."</td>";
+                echo "<td>". $row["Postcode"] ."</td>";
+                echo "<td>". $row["EmailAddress"] ."</td>";
+                echo "<td>". $row["PhoneNumber"] ."</td>";
+                echo "<td>". $row["Skill1"] ."</td>";    
+                echo "<td>". $row["OtherSkills"] ."</td>";
+                echo "<td>". $row["Status"] ."</td>";
                 echo "</tr>";
             }
-        } else {
-            echo "Error: " . mysqli_error($connection);
-        }
-        echo "</table>";  // Closing table tag
-    }
-    
-?>
-
+        ?>
+    </table> 
+    </div>
+    <div class="search_mem_info">
+        <h2>Search for eoi by job reference number</h2>
+        <form method="POST" action="manage.php">
+            <label for="search_eoi_by_job_ref">Please enter a job reference number here:</label>
+            <input type="text" name="search_eoi_by_job_ref"><br>
+            <h2>Search for eoi by name</h2>
+            <label for="search_eoi_by_name">Please enter a name here:</label>
+            <input type="text" name="search_eoi_by_name"><br>
+            <input type="submit" value="Search">
+        </form>
+        <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $search_eoi_by_job_ref = htmlspecialchars(trim($_POST['search_eoi_by_job_ref']));
+                $search_eoi_by_name = htmlspecialchars(trim($_POST['search_eoi_by_name']));
+                require_once "settings.php";
+                $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+                
+                if ($conn) { 
+                    $query = "SELECT * FROM eoi WHERE job_ref_num = '$search_eoi_by_job_ref'";
+                    $stmt = mysqli_prepare($conn, $query);
+                    mysqli_stmt_bind_param($stmt, "s", $search_eoi_by_job_ref);
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_query($conn, $query);
+                }
+                elseif (!empty($search_eoi_by_name)) {
+                    $query = "SELECT * FROM eoi WHERE first_name LIKE ? OR last_name LIKE ?";
+                    $stmt = mysqli_prepare($conn, $query);
+                    $search_eoi_by_name = "%" . $search_eoi_by_name . "%";
+                    mysqli_stmt_bind_param($stmt, "ss", $search_eoi_by_name, $search_eoi_by_name);
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_stmt_get_result($stmt);    
+                }
+                    
+                    if ($result && mysqli_num_rows($result) > 0) { 
+                        echo "<table border='1'>
+                                <tr>
+                                    <th>EOI Number</th>
+                                    <th>Job Ref Num</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>DOB</th>
+                                    <th>Gender</th>
+                                    <th>Street</th>
+                                    <th>Suburb</th>
+                                    <th>State</th>
+                                    <th>Postcode</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Skills</th>
+                                    <th>Other Skills</th>
+                                    <th>Status</th>
+                                </tr>";
+                        
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr>";
+                                    echo "<td>". htmlspecialchars($row["EOInumber"]) ."</td>";
+                                    echo "<td>". htmlspecialchars($row["job_ref_num"]) ."</td>";
+                                    echo "<td>". htmlspecialchars($row["first_name"]) ."</td>";    
+                                    echo "<td>". htmlspecialchars($row["last_name"]) ."</td>";
+                                    echo "<td>". htmlspecialchars($row["dob"]) ."</td>";
+                                    echo "<td>". htmlspecialchars($row["gender"]) ."</td>";
+                                    echo "<td>". htmlspecialchars($row["street"]) ."</td>";
+                                    echo "<td>". htmlspecialchars($row["suburb"]) ."</td>";    
+                                    echo "<td>". htmlspecialchars($row["urstate"]) ."</td>";
+                                    echo "<td>". htmlspecialchars($row["postcode"]) ."</td>";
+                                    echo "<td>". htmlspecialchars($row["email"]) ."</td>";
+                                    echo "<td>". htmlspecialchars($row["phone"]) ."</td>";
+                                    echo "<td>". htmlspecialchars($row["skills"]) ."</td>";    
+                                    echo "<td>". htmlspecialchars($row["other_skills"]) ."</td>";
+                                    echo "<td>". htmlspecialchars($row["status"]) ."</td>";
+                                    echo "</tr>";
+                                }
+                                echo "</table></div>";
+                            } else {
+                                echo "<p>There is no information to display</p>";
+                            }
+                    
+                    mysqli_close($conn);
+                } 
+                else {
+                    echo "<p>Database connection failed.</p>";
+                }
+        ?>
+    </div>
+    <?php   
+        include 'footer.inc';
+    ?>
 </body>
 </html>
