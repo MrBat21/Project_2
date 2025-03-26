@@ -40,6 +40,8 @@
             </div>
         </nav>
         </header>
+        <hr>
+
         <section class="group-section">
     <div class="section-box">
         <div class="group-info">
@@ -129,9 +131,8 @@
         </div>
     </div>
 </section>
-        <footer>
-        <div class="footer">&#169; 2025 SFC, All rights reserved.</div>
-        <div class="contact">Contact Us: example@gmail.com</div>
-        </footer>
+<?php
+            include('footer.inc')
+            ?>
     </body>
 </html>
