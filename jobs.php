@@ -405,10 +405,9 @@
                 </div>
         </div>
         </div>
-        <footer>
-        <div class="footer">&#169; 2025 SFC, All rights reserved.</div>
-        <div class="contact">Contact Us: example@gmail.com</div>
-        </footer>
+        <?php
+            include('footer.inc')
+            ?>
         <div class="popup-overlay" id="disableHover"></div>
         <script>
             function openPopup(index){
