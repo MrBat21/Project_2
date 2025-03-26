@@ -255,8 +255,8 @@ form .btn input{
 }
 
 .contact-text{
-    margin: 20% 0% 20% 0%;
     position: relative;
+    top: 10%
 }
 
 .grid{
@@ -276,6 +276,7 @@ form .btn input{
     display: flex;
     gap: 40px;
     position: relative;
+    top: 10%;
     bottom: 5%;
     left: 10%;
 }
@@ -315,7 +316,3 @@ form .btn input{
 
 
 
-footer{
-    margin-top: 8%;
-    text-align: center;
-}
