@@ -235,6 +235,65 @@ svg{
     background: none;
 }
 
+footer{
+    width: 90%;
+}
+
+.contact-text{
+    position: relative;
+    left: 30%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+    gap: 20px; /* Adds spacing between items */
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-pic svg{
+    fill: white;
+}
+
+.contact-pic{
+    display: flex;
+    position: relative;
+    bottom: 5%;
+}
+
+.mail{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1px;
+    font-weight: 500;
+}
+
+.facebook{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+    font-weight: 500;
+}
+
+.White-text{
+    color: white;
+    font-size: 30px;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+.Gold-text{
+    color: rgb(170, 145, 0);
+    font-size: 45px;
+    margin-top: 2%;
+}
 
 .meminfo{
     color: white;
