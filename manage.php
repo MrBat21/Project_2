@@ -1,158 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    <link rel="stylesheet" href="styles/manage_style.css">
     <title>Management</title>
     </head>
     <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-align: center;
-        }
-
-
-        h2 {
-       color:rgb(255, 255, 255);
-        }
-
-
-        table {
-        width: 70%;
-        margin: 20px auto;
-        border-collapse: separate;
-        border-spacing: 0;
-        border-radius: 15px;
-        overflow: hidden;
-        background-color: #111;
-        font-size: 16px;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: center;
-            border-bottom: 1px solid #444;
-        }
-
-        td {
-        min-height: 50px; /* Ensures a minimum row height */
-        font-weight: bold;
-        }
-
-        th {
-            background-color: #222;
-            font-weight: bold;
-        }
-
-        /* Rounded Corners */
-        th:first-child {
-            border-top-left-radius: 15px;
-        }
-        th:last-child {
-            border-top-right-radius: 15px;
-        }
-        tr:last-child td:first-child {
-            border-bottom-left-radius: 15px;
-        }
-        tr:last-child td:last-child {
-            border-bottom-right-radius: 15px;
-        }
-
-        /* Larger, Pill-Shaped Search Bar */
-        .search-container {
-            background-color: white;
-            color: black;
-            font-size: 20px;
-            font-weight: 500;
-            border-radius: 20px;
-            width: 60%;
-            margin: 30px auto;
-            padding: 15px 0;
-            text-align: center;
-        }
-
-        /* Small Pill-Shaped Delete Button */
-        .delete-btn {
-            background-color: white;
-            color: black;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-
-        .delete-btn:hover {
-            opacity: 0.8;
-        }
-
-        /* Rounded Edit Button */
-        .edit-btn {
-            background-color: white;
-            color: black;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-
-        .edit-btn:hover {
-            opacity: 0.8;
-        }
-
-        label{
-            font-size: 20px;
-            font-weight: 500;
-        }
-        
-        .button{
-            position: relative;
-            left: 5%;
-        }
-
-        .button:hover {
-            opacity: 0.8;
-        }
-
-        .search-wrapper {
-        display: flex; 
-        flex-direction: row;
-        align-items: center;
-        gap: 50px; /* Space between inputs */
-        }
-
-        .search-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        }
-
-        input[type="text"] {
-        width: 200px; /* Adjust width as needed */
-        height: 40px;
-        padding: 5px;
-        font-size: 16px;
-        }
-
-        .search-button {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        }
-
-        .action-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 10px; /* Adds space between buttons */
-        align-items: center;
-        }
-
-        </style>
+    </style>
 
 <?php
     include 'header.inc';
@@ -161,16 +14,22 @@
     <?php 
         include 'menu.inc';
     ?>
+    <hr>
+
+    <h1 style="font-size:40px; text-align: center; justify-content: center;" class="Mana">Management Page</h1>
     <?php
         require_once "settings.php";
         $conn = @mysqli_connect($host, $username, $password, $sql_db); 
+
+        error_reporting(0);
+        ini_set('display_errors', 0);
 
         if ($conn) { 
             $query = "SELECT * FROM eoi"; 
             $result = mysqli_query($conn, $query); 
 
         if ($result) { 
-        
+    
         } else {
             echo "<p>There is no information to display</p>";
         }
@@ -180,10 +39,7 @@
         echo "<p>Unable to connect to the db.</p>"; 
         }
     ?>
-    <hr>
     <div class="phpmeminfo">
-    <h1 style="font-size:40px; text-align: center; justify-content: center;" class="Mana">Management Page</h1>
-
     <div id="editForm" style="display:none;">
     <h2>Edit Record</h2>
     <form method="POST">
