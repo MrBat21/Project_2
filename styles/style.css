@@ -235,13 +235,21 @@ svg{
     background: none;
 }
 
-footer{
-    width: 90%;
+.section_3{
+    justify-content: center;
+    max-width: 60%;
+    font-size: 23px;
+    animation: slideUp 0.8s ease-out;
 }
 
-.contact-text{
-    position: relative;
-    left: 30%;
+.section_3 p{
+    font-weight: 500;
+}
+
+footer{
+    text-align: center;
+    width: 96.3vw;
+    margin-top: 15%;
 }
 
 .grid{
@@ -252,6 +260,12 @@ footer{
     align-items: center;
 }
 
+.contact-text{
+    position: relative;
+    left: 30%;
+    bottom: 5%;
+}
+
 .contact-pic svg{
     fill: white;
 }
@@ -260,6 +274,7 @@ footer{
     display: flex;
     position: relative;
     bottom: 5%;
+    right: 2%;
 }
 
 .mail{
@@ -270,6 +285,12 @@ footer{
     text-align: center;
     gap: 1px;
     font-weight: 500;
+    position: relative;
+    right: 6%;
+}
+
+.mail svg{
+    padding-bottom: 1em;
 }
 
 .facebook{
@@ -279,23 +300,23 @@ footer{
     align-items: center;
     text-align: center;
     gap: 4px;
+    padding-right: 2%;
     font-weight: 500;
+}
+
+.facebook svg{
+    padding-bottom: 1em;
 }
 
 .White-text{
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 5%;
     margin-bottom: 1%;
 }
 
 .Gold-text{
     color: rgb(170, 145, 0);
-    font-size: 45px;
+    font-size: 30px;
     margin-top: 2%;
-}
-
-.meminfo{
-    color: white;
-    font-size: 20px;
 }
