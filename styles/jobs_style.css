@@ -271,7 +271,8 @@ footer{
 
 .contact-text{
     position: relative;
-    left: 20%;
+    left: 30%;
+    bottom: 10%;
 }
 
 .contact-pic svg{
