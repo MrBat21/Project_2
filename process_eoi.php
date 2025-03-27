@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="styles/eoi.css">
 <title>Process EOI</title>
 
 <meta charset="utf-8" />
@@ -130,8 +131,10 @@ if (!empty($errors)) {
     foreach ($errors as $error) {
         echo "<p>$error</p>";
     }
+    echo "<a href='apply.php'>Go Back</a>";
     exit();
 }
+
 
 // ✅ If no errors, process the application
 echo "<p>Form submitted successfully!</p>";{
