@@ -15,7 +15,7 @@
         <div class="container">
             <div class="back-end list">
             <h3>Back-end Developer</h3>
-                <img class="picture" src="styles/images/back-end.jpg">
+                <img class="picture" src="styles/images/back-end.jpg" alt="back-end engineer">
                 <div class="content">
                     <p> At SFC Company, we’re driven by the mission to build scalable, secure, 
                         and high-performing digital solutions. 
@@ -95,7 +95,7 @@
                 </div>
             <div class="full-stack list">
             <h3>Full-Stack Developer</h3>
-            <img class="picture" src="styles/images/full-stack.jpg">
+            <img class="picture" src="styles/images/full-stack.jpg" alt="full-stack dev">
             <div class="content">
                 <p>As a Full-Stack Developer, you will play a vital role in developing, deploying, and maintaining web applications that meet the dynamic needs of our clients. 
                     You’ll collaborate with cross-functional teams to deliver intuitive user interfaces, reliable back-end systems, and innovative solutions.</p>
@@ -193,7 +193,7 @@
                 </div>
             <div class="data_sci list">
             <h3 class="name">Data Scientist</h3>
-            <img class="picture" src="styles/images/data.jpg">
+            <img class="picture" src="styles/images/data.jpg" alt="data engineer">
             <div class="content">
                     <p>At SFC Company, we believe data holds the power to drive innovation and make a lasting impact. 
                     From healthcare to finance, retail, and beyond, we work with industry leaders to uncover actionable insights that transform operations and enhance lives. 
@@ -305,7 +305,7 @@
         <div class="container2">
         <div class="front-end list">
         <h3 class="name">Front-End Developer</h3>
-        <img class="picture" src="styles/images/front-end.jpeg">
+        <img class="picture" src="styles/images/front-end.jpeg " alt="front-end dev">
         <div class="content">
                     <p>SFC's front-end development focuses on delivering a seamless and visually appealing user experience. Using the latest web technologies like HTML, CSS, and JavaScript, we ensure that our digital platforms are responsive, intuitive, and interactive.</p>
         <button type="submit" class="btn" onclick="openPopup(3)">Read more</button>
@@ -339,7 +339,7 @@
                 </div>
                 <div class="data-egineer list">
         <h3 class="name">Data Engineering</h3>
-        <img class="picture" src="styles/images/data-engineer.jpg">
+        <img class="picture" src="styles/images/data-engineer.jpg" alt="data engineer">
         <div class="content">
                     <p>At SFC Company, focuses on designing, building, and maintaining data pipelines and infrastructure. Requires expertise in SQL, Python, cloud platforms (AWS, GCP), and big data technologies like Hadoop or Spark</p>
         <button type="submit" class="btn" onclick="openPopup(4)">Read more</button>
@@ -372,7 +372,7 @@
                 </div>
                 <div class="automation list">
         <h3 class="name">Automation engineer</h3>
-        <img class="picture" src="styles/images/Automation.jpg">
+        <img class="picture" src="styles/images/Automation.jpg" alt="Automation engineer">
         <div class="content">
                     <p>At SFC Company, we develops and maintains automated testing frameworks to ensure software quality. Requires knowledge of Selenium, Java, Python, and CI/CD tools for seamless deployment and testing.</p>
         <button type="submit" class="btn" onclick="openPopup(5)">Read more</button>
