@@ -59,15 +59,6 @@
                 <li><strong>Hoang Don Xuan Vinh</strong> - 105545302 - 100% - making the website format, homepage, adding CSS features.</li>
             </ul>
         </div>
-        <div class="contact-info">
-            <h2>Contact Us:</h2>
-            <ul>
-                <li><strong>Vo Cong Minh</strong> - <a href="mailto:vocong.minh2103@gmail.com">vocong.minh2103@gmail.com</a></li>
-                <li><strong>Le Ngoc Trieu Duong</strong> - <a href="mailto:duongle271006@gmail.com">duongle271006@gmail.com</a></li>
-                <li><strong>Truong Minh Tinh</strong> - <a href="mailto:tinhtruong2605@gmail.com">tinhtruong2605@gmail.com</a></li>
-                <li><strong>Hoang Don Xuan Vinh</strong> - <a href="mailto:vinh.donhoang@gmail.com">vinh.donhoang@gmail.com</a></li>
-            </ul>
-        </div>
         <div class="timetable">
             <h2>Timetable</h2>
             <table>
