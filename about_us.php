@@ -110,7 +110,7 @@
     alt="Vo Cong Minh" 
     title="Vo Cong Minh - President"
     class="leader-image">
-      <h3>Vo Cong Minh</h3>
+      <h3><a href="mailto:vocong.minh2103@gmail.com">Vo Cong Minh</a></h3>
       <p>President</p>
     </div>
     <div class="leader">
@@ -121,7 +121,7 @@
     alt="Le Ngoc Trieu Duong"
     title="Le Ngoc Trieu Duong - Player"
     class="leader-image">
-      <h3>Le Ngoc Trieu Duong</h3>
+      <h3><a href="mailto:duongle271006@gmail.com">Le Ngoc Trieu Duong</a></h3>
       <p>Player</p>
     </div>
     <div class="leader">
@@ -132,15 +132,18 @@
     alt="Hoang Don Xuan Vinh"
     title="Hoang Don Xuan Vinh - Player"
     class="leader-image">
-      <h3>Hoang Don Xuan Vinh</h3>
+      <h3><a href="mailto:vinh.donhoang@gmail.com">Hoang Don Xuan Vinh</a></h3>
       <p>Player</p>
     </div>
     <div class="leader">
       <img 
       loading="lazy"
       role="presentation"
-      src="styles/images/TruongMinhTinh.jpg" alt="Truong Minh Tinh">
-      <h3>Truong Minh Tinh</h3>
+      src="styles/images/TruongMinhTinh.jpg" 
+      alt="Truong Minh Tinh"
+      title="Truong Minh Tinh - Player"
+      class="leader-image">
+      <h3><a href="mailto:tinhtruong2605@gmail.com">Truong Minh Tinh</a></h3>
       <p>Player</p>
     </div>
     <!-- Thêm các phần tử .leader cho các thành viên khác nếu cần -->
