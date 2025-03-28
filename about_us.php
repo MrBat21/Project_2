@@ -102,22 +102,43 @@
   <h2>Our Members</h2>
   <div class="leadership-container">
     <div class="leader">
-      <img src="styles/images/VoCongMinh.jpg" alt="Vo Cong Minh">
+      <img 
+    loading="lazy"
+    role="presentation"
+    src="styles/images/VoCongMinh.jpg" 
+    alt="Vo Cong Minh" 
+    title="Vo Cong Minh - President"
+    class="leader-image">
       <h3>Vo Cong Minh</h3>
       <p>President</p>
     </div>
     <div class="leader">
-      <img src="styles/images/LeNgocTrieuDuong.jpg" alt="Le Ngoc Trieu Duong">
+      <img 
+    loading="lazy"
+    role="presentation"
+    src="styles/images/LeNgocTrieuDuong.jpg" 
+    alt="Le Ngoc Trieu Duong"
+    title="Le Ngoc Trieu Duong - Player"
+    class="leader-image">
       <h3>Le Ngoc Trieu Duong</h3>
       <p>Player</p>
     </div>
     <div class="leader">
-      <img src="styles/images/HoangDonXuanVinh.jpg" alt="Hoang Don Xuan Vinh">
+      <img 
+    loading="lazy"
+    role="presentation"
+    src="styles/images/HoangDonXuanVinh.jpg" 
+    alt="Hoang Don Xuan Vinh"
+    title="Hoang Don Xuan Vinh - Player"
+    class="leader-image">
       <h3>Hoang Don Xuan Vinh</h3>
       <p>Player</p>
     </div>
     <div class="leader">
-      <img src="styles/images/TruongMinhTinh.jpg" alt="Truong Minh Tinh">
+      <img 
+      loading="lazy"
+      role="presentation"
+      src="styles/images/TruongMinhTinh.jpg" alt="Truong Minh Tinh">
       <h3>Truong Minh Tinh</h3>
       <p>Player</p>
     </div>
