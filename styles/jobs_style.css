@@ -151,7 +151,7 @@ h1{
 .btn{
     padding: 15px 40px;
     position: absolute;
-    bottom: 13%;
+    bottom: 16%;
     background: white;
     color: black;
     border: 0;
@@ -215,15 +215,15 @@ h1{
 }
 
 .picture{
-    height: 540px;
-    width: 595px;
+    width: 550px;
     display: block;
+    border-radius: 20px;
 }
 
 .content{
     position: absolute;
-    width: 595px;
-    height: 545px;
+    width: 550px;
+    height: 560px;
     background: none;
     display: flex;
     justify-content: center;
@@ -247,8 +247,8 @@ h1{
     position: fixed;
     top: 0;
     left: 0;
-    width: 595px;
-    height: 540px;
+    width: 550px;
+    height: 560px;
     background: rgba(0, 0, 0, 0.2); /* Light overlay effect */
     z-index: 1000;
     display: none;
