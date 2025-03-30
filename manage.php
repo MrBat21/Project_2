@@ -40,7 +40,7 @@
         }
     ?>
     <div class="phpmeminfo">
-    <div id="editForm" style="display:none;">
+    <div class="editForm" id="editForm" style="display:none;">
     <h2>Edit Record</h2>
     <form method="POST">
         <input type="hidden" id="edit_id" name="edit_id">
@@ -49,14 +49,14 @@
         <label>Email: <input type="email" id="edit_email" name="edit_email" required></label><br>
         <label>Phone: <input type="text" id="edit_phone" name="edit_phone" required></label><br>
         <label>Status:
-            <select id="edit_status" name="edit_status" required>
+            <select class="edit_status" id="edit_status" name="edit_status" required>
                 <option value="New">New</option>
                 <option value="Current">Current</option>
                 <option value="Final">Final</option>
             </select>
         </label><br>
-        <input type="submit" name="update" value="Update">
-        <button type="button" onclick="document.getElementById('editForm').style.display='none';">Cancel</button>
+        <input class="btn" type="submit" name="update" value="Update">
+        <button class="btn" type="button" onclick="document.getElementById('editForm').style.display='none';">Cancel</button>
     </form>
     </div>
 
