@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles/style.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Website Enhancements</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        ul {
-            line-height: 1.8;
-        }
-    </style>
 </head>
 <body>
+    <?php
+        include("header.inc")
+    ?>
+    <?php
+    include("menu.inc");
+    ?>
+    <hr>
+    <h1>Enhancements</h1>
     <div class="container">
         <h2>Website Enhancements</h2>
         <p>We have made several enhancements to improve the functionality and user experience of our job application website:</p>
@@ -36,5 +28,8 @@
             <li><strong>Backend Integration:</strong> Streamlined API calls for job applications and data retrieval.</li>
         </ul>
     </div>
+    <?php
+    include("footer.inc");
+    ?>
 </body>
 </html>
