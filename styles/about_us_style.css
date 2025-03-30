@@ -116,7 +116,7 @@ section.group-section {
 /* ======================
    Header Section
    ====================== */
-header{
+.header{
     display: flex;
     text-align: center;
     align-items: center;
