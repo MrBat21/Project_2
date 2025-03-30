@@ -133,6 +133,7 @@ hr{
 form .user-details .input-box {
     margin-bottom: 12px;
     width: calc(100% / 2 - 10px);
+    color: #000000;
   }
 
 form .input-box span.details {
@@ -186,6 +187,11 @@ form .input-box span.details {
     border: 0.5px solid #ccc;
     font-weight: 500;
     font-size: 16px;
+    color: #000000;
+}
+
+option{
+    color: #000000;
 }
 
 .checkbox-container{
