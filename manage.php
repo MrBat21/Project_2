@@ -234,7 +234,7 @@
         mysqli_stmt_execute($stmt);
 
         if (mysqli_stmt_affected_rows($stmt) > 0) {
-            echo "<script>alert('Record deleted successfully'); window.location.href='your_manage_page.php';</script>";
+            echo "<script>alert('Record deleted successfully'); window.location.href='manage.php';</script>";
         } else {
             echo "<script>alert('Error deleting record');</script>";
         }
